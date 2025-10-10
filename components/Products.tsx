@@ -217,7 +217,7 @@ const Products: React.FC<ProductsProps> = ({
               key={product.id}
               product={product}
               onAddToCart={handleAddToCart}
-              onViewDetails={onViewDetails}
+              onClick={onViewDetails}
             />
           ))}
         </div>

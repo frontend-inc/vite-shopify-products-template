@@ -23,7 +23,7 @@ const ProductDetailInfo: React.FC<ProductDetailInfoProps> = ({
   const formatPrice = (price: { amount: string; currencyCode: string }) => {
     return new Intl.NumberFormat('en-US', {
       style: 'currency',
-      currency: price.currencyCode,
+      currency: 'USD',
     }).format(parseFloat(price.amount));
   };
 
