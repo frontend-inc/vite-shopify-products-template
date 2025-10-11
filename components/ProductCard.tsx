@@ -127,14 +127,14 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, onAddToCart, onClick
       {/* Product Info */}
       <div className="p-6">
         <h3
-          className="text-xl font-semibold text-gray-900 mb-1 line-clamp-2 min-h-[3.5rem]"
+          className="text-xl font-semibold text-gray-900 mb-1 min-h-[3.5rem]"
           style={{ fontFamily: 'Space Grotesk, sans-serif' }}
         >
-          {product.title}
+          {truncate(product.title, 60)}
         </h3>
 
-        <p className="text-gray-600 text-sm mb-4 line-clamp-2 h-[2.5rem]">
-          {product.description || ''}
+        <p className="text-gray-600 text-sm mb-4 h-[2.5rem]">
+          {truncate(product.description || '', 100)}
         </p>
 
         {/* Price Section */}
