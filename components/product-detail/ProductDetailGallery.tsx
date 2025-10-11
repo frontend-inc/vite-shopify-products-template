@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 interface ProductImage {
   url: string;
@@ -7,10 +7,11 @@ interface ProductImage {
 
 interface ProductDetailGalleryProps {
   images: ProductImage[];
+  selectedImageIndex: number;
+  onImageChange: (index: number) => void;
 }
 
-const ProductDetailGallery: React.FC<ProductDetailGalleryProps> = ({ images }) => {
-  const [selectedImage, setSelectedImage] = useState(0);
+const ProductDetailGallery: React.FC<ProductDetailGalleryProps> = ({ images, selectedImageIndex, onImageChange }) => {
 
   return (
     <div>
@@ -18,8 +19,8 @@ const ProductDetailGallery: React.FC<ProductDetailGalleryProps> = ({ images }) =
       <div className="aspect-square bg-gray-100 rounded-lg overflow-hidden mb-4">
         {images.length > 0 ? (
           <img
-            src={images[selectedImage].url}
-            alt={images[selectedImage].altText || 'Product image'}
+            src={images[selectedImageIndex].url}
+            alt={images[selectedImageIndex].altText || 'Product image'}
             className="w-full h-full object-cover"
           />
         ) : (
@@ -35,10 +36,10 @@ const ProductDetailGallery: React.FC<ProductDetailGalleryProps> = ({ images }) =
           {images.map((image, index) => (
             <button
               key={index}
-              onClick={() => setSelectedImage(index)}
+              onClick={() => onImageChange(index)}
               className={`aspect-square rounded-lg overflow-hidden border-2 transition-colors ${
-                selectedImage === index 
-                  ? 'border-black' 
+                selectedImageIndex === index
+                  ? 'border-black'
                   : 'border-gray-200 hover:border-gray-300'
               }`}
             >
