@@ -3,6 +3,7 @@ import { getProduct } from '../../services/shopify/api';
 import { useCart } from '../../contexts/CartContext';
 import ProductDetailGallery from './ProductDetailGallery';
 import ProductDetailInfo from './ProductDetailInfo';
+import { Button } from '../ui/button';
 
 interface ProductImage {
   url: string;
@@ -207,12 +208,12 @@ const ProductDetail: React.FC<ProductDetailProps> = ({ handle, onAddToCart: onAd
           <p className="text-red-600 mb-4">
             {error || 'The requested product could not be found.'}
           </p>
-          <button
+          <Button
             onClick={() => window.history.back()}
-            className="bg-red-600 text-white px-6 py-2 rounded-lg hover:bg-red-700 transition-colors"
+            variant="destructive"
           >
             Go Back
-          </button>
+          </Button>
         </div>
       </div>
     );

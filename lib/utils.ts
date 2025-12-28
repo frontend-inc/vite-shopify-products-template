@@ -1,3 +1,9 @@
+import { clsx, type ClassValue } from 'clsx';
+
+export function cn(...inputs: ClassValue[]) {
+  return clsx(inputs);
+}
+
 /**
  * Truncates a string to a specified length and adds an ellipsis if needed
  * @param text - The text to truncate
