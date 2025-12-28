@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import ProductDetail from './product-detail/index';
+import ProductDetail from './product-detail/ProductDetail';
 import { Button } from './ui/button';
 
 interface ProductImage {

@@ -15,7 +15,7 @@ interface ProductPrice {
   currencyCode: string;
 }
 
-interface ProductVariant {
+export interface ProductVariant {
   id: string;
   title: string;
   price: ProductPrice;
