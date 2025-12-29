@@ -96,7 +96,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, onAddToCart, onClick
   };
 
   return (
-    <Card className="!py-0 !gap-0 overflow-hidden hover:shadow-xl transition-shadow duration-300 group">
+    <Card className="py-0 gap-0 overflow-hidden hover:shadow-xl transition-shadow duration-300 group bg-background rounded-none shadow-none">
       {/* Product Image */}
       <div
         className="aspect-square overflow-hidden bg-gray-100 relative cursor-pointer"
