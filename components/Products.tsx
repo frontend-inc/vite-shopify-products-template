@@ -120,7 +120,7 @@ const Products: React.FC<ProductsProps> = ({
       <div className="py-16">
         <div className="max-w-7xl mx-auto px-4">
           <h2
-            className="text-4xl font-bold text-center mb-12 font-heading"
+            className="text-3xl font-bold text-center mb-12 font-heading"
           >
             {title}
           </h2>
@@ -149,7 +149,7 @@ const Products: React.FC<ProductsProps> = ({
       <div className="py-16">
         <div className="max-w-7xl mx-auto px-4 text-center">
           <h2
-            className="text-4xl font-bold mb-8 font-heading"
+            className="text-3xl font-bold mb-8 font-heading"
           >
             {title}
           </h2>
@@ -179,7 +179,7 @@ const Products: React.FC<ProductsProps> = ({
       <div className="py-16">
         <div className="max-w-7xl mx-auto px-4 text-center">
           <h2
-            className="text-4xl font-bold mb-8 font-heading"
+            className="text-3xl font-bold mb-8 font-heading"
           >
             {title}
           </h2>
@@ -202,7 +202,7 @@ const Products: React.FC<ProductsProps> = ({
     <div className="py-16 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4">
         <h2
-          className="text-5xl font-bold text-center mb-16 text-gray-900 font-heading"
+          className="text-4xl font-bold text-center mb-16 text-gray-900 font-heading"
         >
           {title}
         </h2>
